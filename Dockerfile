@@ -9,8 +9,8 @@ RUN npm install
 # Copy the source for the app
 COPY . .
 
-# Set file permissions
-RUN chmod -R 755 /usr/src/elevation-service
+RUN mkdir -p /usr/src/elevation-service/data && \
+    chmod -R 755 //usr/src/elevation-service
 
 # Run the app
 CMD ["npm", "start"]
