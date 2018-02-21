@@ -11,6 +11,10 @@ const maxPostSize = process.env.MAX_POST_SIZE || "500kb";
 const tiles = new TileSet(tileDirectory, {downloader:tileDownloader});
 
 module.exports = async (req, res) => {
+  if (req.method === 'OPTIONS') {
+    return send(res, 200)
+  }
+
   if (req.method !== 'POST') {
     return send(res, 405, {error: 'Only POST allowed'})
   }
