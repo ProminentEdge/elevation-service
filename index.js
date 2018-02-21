@@ -12,6 +12,7 @@ const tiles = new TileSet(tileDirectory, {downloader:tileDownloader});
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Headers', req.getHeader('Access-Control-Request-Headers'))
 
   if (req.method === 'OPTIONS') {
     return send(res, 200)
