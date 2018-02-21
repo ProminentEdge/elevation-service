@@ -23,7 +23,7 @@
   "dependencies": {
     "geojson-elevation": "^1.1.1",
     "micro": "^9.1.0",
-    "node-hgt": "^1.2.2"
+    "node-hgt": "git://github.com/ProminentEdge/node-hgt.git#master"
   },
   "devDependencies": {
     "ava": "^0.25.0",
