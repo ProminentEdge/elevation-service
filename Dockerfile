@@ -11,6 +11,7 @@ COPY . .
 
 RUN mkdir -p /usr/src/elevation-service/data && \
     chmod -R 755 //usr/src/elevation-service
+VOLUME /usr/src/elevation-service/data
 
 # Run the app
 CMD ["npm", "start"]
